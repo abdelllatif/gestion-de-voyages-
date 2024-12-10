@@ -68,3 +68,12 @@ DELETE FROM reservation WHERE id_activite = 4;
 DELETE FROM activite WHERE id_activite = 4;
 
 DELETE FROM reservation WHERE id_reservation = 4;
+UPDATE cliente
+SET 
+    nom = 'Ali',
+    prenom = 'Hassan',
+    email = 'ali.hassan@example.com',
+    telephone = '987654321',
+    adresse = '789 New Street',
+    date_naissance = '1991-07-15'
+WHERE id_client = 1;

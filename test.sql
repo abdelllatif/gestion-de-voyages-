@@ -58,3 +58,13 @@ VALUES
 (2, 2, '2023-12-02 15:30:00', 'En attente'),
 (2, 1, '2023-12-03 10:00:00', 'Annulée'),
 (3, 3, '2023-12-04 09:00:00', 'Confirmée');
+
+DELETE FROM reservation WHERE id_client = 4;
+
+DELETE FROM cliente WHERE id_client = 4;
+
+DELETE FROM reservation WHERE id_activite = 4;
+
+DELETE FROM activite WHERE id_activite = 4;
+
+DELETE FROM reservation WHERE id_reservation = 4;

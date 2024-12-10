@@ -77,3 +77,15 @@ SET
     adresse = '789 New Street',
     date_naissance = '1991-07-15'
 WHERE id_client = 1;
+
+
+UPDATE activite
+SET 
+    titre = 'Aventure Montagne', 
+    description = 'Randonnée dans les montagnes',
+    destination = 'Atlas',
+    prix = 300.00, 
+    date_debut = '2024-05-01',
+    date_fin = '2024-05-03', 
+    places_disponible = 20
+WHERE id_activite = 2;

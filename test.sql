@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS vygs;
-USE vygs;
+CREATE DATABASE IF NOT EXISTS mer;
+USE mer;
 
 CREATE TABLE IF NOT EXISTS cliente (
     id_client INT(11) NOT NULL AUTO_INCREMENT,
@@ -35,15 +35,4 @@ CREATE TABLE IF NOT EXISTS reservation (
     FOREIGN KEY (id_activite) REFERENCES activite(id_activite)
 );
 
-INSERT INTO cliente (nom, prenom, email, telephone, adresse, date_naissance)
-VALUES ('John', 'Doe', 'john.doe@example.com', '123456789', '123 Main Street', '1990-01-01');
 
-
-INSERT INTO activite (titre, description, destination, prix, date_debut, date_fin, places_disponible) VALUES
-('Aventure Désert', 'Nuit dans les dunes', 'Merzouga', 250.00, '2024-03-20', '2024-03-21', 10),
-('Festival Musique', 'Concert plein air', 'Ouarzazate', 100.00, '2024-04-15', '2024-04-15', 50);
-
-
-INSERT INTO reservation (id_client, id_activite, date_reservation, status) VALUES
-(1, 1, '2023-12-01 10:00:00', 'Confirmée'),
-(2, 2, '2023-12-02 15:30:00', 'En attente'),

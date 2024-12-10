@@ -1,0 +1,48 @@
+
+Fonctionnalités clés du projet d'agence de voyage :
+
+
+
+*************************
+
+1_Gérer les clients inscrits à l'agence :
+
+Description : Cette fonctionnalité permet à l'agent de l'agence de gérer les informations des clients inscrits. Elle comprend l'ajout, la suppression et la modification des données des clients (nom, prénom, email, téléphone, etc.).
+Fonctionnalité incluse :
+Ajouter un client : Permet à l'agent d'ajouter un nouveau client à la base de données via un formulaire.
+Modifier un client : Permet de mettre à jour les informations du client existant.
+Supprimer un client : Permet de supprimer un client de la base de données, et donc toutes les réservations associées.
+
+
+*************************
+
+2_Afficher dynamiquement les offres d'activités disponibles:
+
+Description : Permet d'afficher sur le site les différentes activités proposées par l'agence (vols, hôtels, circuits touristiques, etc.) de manière dynamique. Les utilisateurs peuvent voir les activités disponibles avec leurs détails (titre, description, prix, etc.).
+Fonctionnalité incluse :
+Afficher toutes les activités : Liste toutes les activités disponibles à la réservation avec leur statut (disponible ou non).
+Détails d'une activité : Lorsque l'utilisateur sélectionne une activité, des informations détaillées comme la disponibilité des places et le tarif sont affichées.
+
+*************************
+
+
+3_Permettre aux clients de réserver des activités en ligne:
+
+Description : Cette fonctionnalité permet aux clients de réserver des activités (vols, hôtels, circuits, etc.) directement depuis le site. Les clients peuvent choisir et personnaliser leur voyage selon leurs préférences.
+Fonctionnalité incluse :
+Réservation en ligne : Les clients peuvent sélectionner une activité, la date et ajouter des options de personnalisation (par exemple, choix de chambre d'hôtel ou de transport).
+Validation et confirmation : Une fois la réservation effectuée, un résumé de la réservation est affiché à l'utilisateur avec les informations confirmées.
+
+
+*************************
+
+4_Modifier une réservation:
+
+Description : Les clients ou les agents peuvent modifier les détails d'une réservation, par exemple, changer la date d'activité ou ajouter des options supplémentaires.
+Fonctionnalité incluse :
+Modification de la réservation : Permet de modifier les informations d'une réservation, comme la date ou le nombre de personnes.
+Validation de la modification : Après modification, la nouvelle réservation est mise à jour dans la base de données.
+
+
+*************************
+*************************

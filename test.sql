@@ -36,3 +36,25 @@ CREATE TABLE IF NOT EXISTS reservation (
 );
 
 
+INSERT INTO cliente (nom, prenom, email, telephone, adresse, date_naissance)
+VALUES 
+('John', 'Doe', 'john.doe@example.com', '123456789', '123 Main Street', '1990-01-01'),
+('babu', 'ale', 'john.e@example.com', '123786789', '456 Park Avenue', '1995-05-05'),
+('pop', 'Dorede', 'john.de@example.com', '4556655567', '789 Elm Street', '1988-12-12'),
+('Jofereshn', 'broe', 'john.doue@example.com', '123478789', '321 Oak Lane', '1992-03-03'),
+('saden', 'jakoe', 'john.dome@example.com', '963456789', '654 Pine Road', '1998-08-08');
+
+
+INSERT INTO activite (titre, description, destination, prix, date_debut, date_fin, places_disponible)
+VALUES
+('Aventure Désert', 'Nuit dans les dunes', 'Merzouga', 250.00, '2024-03-20', '2024-03-21', 10),
+('Festival Musique', 'Concert plein air', 'Ouarzazate', 100.00, '2024-04-15', '2024-04-15', 50),
+('Roma Désert', 'Nuit dans les dunes', 'Sala', 200.00, '2024-03-20', '2024-03-21', 15),
+('Aventure USA', 'Voyage de luxe', 'Rabat', 500.00, '2024-06-01', '2024-06-10', 8);
+
+INSERT INTO reservation (id_client, id_activite, date_reservation, status)
+VALUES
+(1, 1, '2023-12-01 10:00:00', 'Confirmée'),
+(2, 2, '2023-12-02 15:30:00', 'En attente'),
+(2, 1, '2023-12-03 10:00:00', 'Annulée'),
+(3, 3, '2023-12-04 09:00:00', 'Confirmée');

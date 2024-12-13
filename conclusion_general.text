@@ -1,0 +1,46 @@
+
+Pour ce projet, voici un vesion général de ce que j'ai réalisé et comment j'ai utilisé différentes 
+technologies pour créer une solution fonctionnelle :
+*********************************************************************************
+
+Configuration de l'environnement
+J'ai installé XAMPP pour configurer un serveur local Avec XAMPP, j'ai pu créer une base de données avec phpMyAdmin. Ce dernier m'a permis de gérer les tables et les relations entre elles.
+*********************************************************************************
+
+Conception de la base de données
+La base de données a été créée en suivant un schéma ERD que j'ai adapté aux besoins du projet. Les principales tables sont :
+
+Clients : pour stocker les informations des clients inscrits.
+Activités : pour les différentes offres disponibles, comme les vols, hôtels, etc.
+Réservations : pour lier les clients aux activités réservées.
+J'ai utilisé PHP pour gérer les interactions avec la base de données. Lorsque de nouvelles réservations sont faites, les informations du client et de l'activité sont ajoutées aux tables correspondantes.
+
+Ajout de Clients, Activités, et Réservations
+Ajout de Clients : J'ai créé un formulaire d'inscription pour ajouter de nouveaux clients à la base de données. Les informations telles que le nom, l'email et le numéro de téléphone sont saisies, puis envoyées à un script PHP qui les insère dans la table Clients. Ce script utilise une requête SQL INSERT pour enregistrer ces données dans la base de données.
+
+Ajout d'Activités : J'ai également créé un formulaire pour ajouter de nouvelles activités (comme des voyages, des circuits touristiques, etc.). Lorsqu'un administrateur souhaite ajouter une activité, il remplit un formulaire avec des informations comme le nom de l'activité, la description et le prix. Le script PHP prend ces informations et les insère dans la table Activités.
+
+Réservations : La réservation est le cœur du projet. J'ai créé un formulaire permettant aux clients de réserver des activités. Après avoir sélectionné une activité, le client remplit ses informations et soumet le formulaire. Le script PHP enregistre la réservation dans la table Réservations en associant un client à une activité. Une fois la réservation effectuée, les détails sont enregistrés et une confirmation est envoyée au client.
+*********************************************************************************
+
+Contrôle des données avec PHP
+J'ai utilisé PHP pour contrôler et manipuler les données. Par exemple :
+
+
+Affichage dynamique des données : Pour afficher les réservations, les activités et les clients, j'ai utilisé PHP pour extraire les données de la base de données et les afficher de manière dynamique dans des pages HTML.
+
+
+*********************************************************************************
+
+Design avec Tailwind CSS
+Pour le design, j'ai utilisé Tailwind CSS, une bibliothèque utilitaire qui m'a permis de styliser rapidement le site. Grâce à Tailwind, les formulaires et les pages ont un design moderne et réactif. Par exemple :
+
+Formulaires d'ajout de données : J'ai stylisé les formulaires avec des classes Tailwind pour rendre l'interface utilisateur simple et agréable.
+Affichage des données : Les listes des activités, des clients et des réservations sont également stylisées de manière claire et lisible.
+
+
+*********************************************************************************
+
+
+5. Diagramme UML : Je vais également créer un diagramme de cas d’utilisation pour décrire les interactions entre les utilisateurs (clients et administrateurs) et le système. Cela montrera les principales fonctionnalités telles que la consultation des offres, la réservation d’activités, et la personnalisation des voyages.
+ et affichées, et que le système fonctionne comme prévu.

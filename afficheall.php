@@ -7,7 +7,7 @@ $dbname = 'vygs';
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
 if ($mysqli->connect_error) {
-    die('Connection failed: ' . $mysqli->connect_error);
+    die('Échec de la connexion : ' . $mysqli->connect_error);
 }
 
 $clients_result = $mysqli->query("SELECT id_client, nom FROM cliente");
@@ -18,7 +18,6 @@ $reservations_result = $mysqli->query("SELECT r.id_reservation, r.id_client, r.i
                                        FROM reservation r
                                        JOIN cliente c ON r.id_client = c.id_client
                                        JOIN activite a ON r.id_activite = a.id_activite");
-
 
 $reservations_count = $mysqli->query("SELECT COUNT(*) as total_reservations FROM reservation");
 $total_reservations = $reservations_count->fetch_assoc()['total_reservations'];
@@ -31,12 +30,12 @@ $activities_result = $mysqli->query("SELECT a.id_activite, a.titre, a.places_dis
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Reservations Overview</title>
+    <title>Aperçu des Réservations</title>
 </head>
 <body class="bg-gray-100">
 
@@ -44,7 +43,7 @@ $activities_result = $mysqli->query("SELECT a.id_activite, a.titre, a.places_dis
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="h-36 w-36"><img src="includes/—Pngtree—tour and travel logo_5695483.png" alt="travels"></div>
+                <div class="h-36 w-36"><img src="includes/—Pngtree—tour and travel logo_5695483.png" alt="voyages"></div>
                 <div class="ml-10 flex items-center space-x-4">
                     <a href="index.php" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Ajouter Client</a>
                     <a href="afficheall.php" class="text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Informations</a>
@@ -59,16 +58,16 @@ $activities_result = $mysqli->query("SELECT a.id_activite, a.titre, a.places_dis
 <div class="container mx-auto p-6">
    
     <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-800">Total Reservations: <?= $total_reservations ?></h1>
+        <h1 class="text-2xl font-bold text-gray-800">Total des Réservations : <?= $total_reservations ?></h1>
     </div>
 
     <div class="mb-6">
-        <h2 class="text-xl font-semibold text-gray-800"> Activities Disponible</h2>
+        <h2 class="text-xl font-semibold text-gray-800">Activités Disponibles</h2>
         <table class="min-w-full bg-white border border-gray-300 rounded-md shadow-md mt-4">
             <thead class="bg-indigo-600 text-white">
                 <tr>
-                    <th class="py-2 px-4 text-left">Activity</th>
-                    <th class="py-2 px-4 text-left">Available Spots</th>
+                    <th class="py-2 px-4 text-left">Activité</th>
+                    <th class="py-2 px-4 text-left">Places Disponibles</th>
                 </tr>
             </thead>
             <tbody>
@@ -82,17 +81,16 @@ $activities_result = $mysqli->query("SELECT a.id_activite, a.titre, a.places_dis
         </table>
     </div>
 
-
     <div class="mb-6">
-        <h2 class="text-xl font-semibold text-gray-800">Clients and Their Reservations</h2>
+        <h2 class="text-xl font-semibold text-gray-800">Clients et leurs Réservations</h2>
         <table class="min-w-full bg-white border border-gray-300 rounded-md shadow-md mt-4">
             <thead class="bg-indigo-600 text-white">
                 <tr>
                     <th class="py-2 px-4 text-left">Client</th>
-                    <th class="py-2 px-4 text-left">Reservation ID</th>
-                    <th class="py-2 px-4 text-left">Activity</th>
+                    <th class="py-2 px-4 text-left">ID Réservation</th>
+                    <th class="py-2 px-4 text-left">Activité</th>
                     <th class="py-2 px-4 text-left">Date</th>
-                    <th class="py-2 px-4 text-left">Status</th>
+                    <th class="py-2 px-4 text-left">Statut</th>
                 </tr>
             </thead>
             <tbody>

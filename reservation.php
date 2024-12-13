@@ -13,7 +13,7 @@ if ($mysqli->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_client = $_POST['id_client'];
     $id_activite = $_POST['id_activite'];
-    $date_reservation = $_POST['date_reservation'];
+    $date_reservation = $_POST['dateReserv'];
     $status = $_POST['status'];
 
     $stmt = $mysqli->prepare('INSERT INTO reservation (id_client, id_activite, date_reservation, status) VALUES (?, ?, ?, ?)');
